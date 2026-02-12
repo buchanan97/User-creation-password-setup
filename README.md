@@ -1,112 +1,37 @@
+# **📊 User Lookup & Identity Automation**
 
-
-Below is a polished, professional **README.md** tailored to your repository’s actual function.
-
----
-
-# **User Password Requirement Validation Scripts**
-
-This repository contains Python scripts that validate whether a **user‑created password** meets strong security requirements.  
-These tools are ideal for onboarding workflows, IAM automation, and enforcing password policies in educational, enterprise, or cloud environments.
+This repository contains Python utilities designed to efficiently parse Active Directory (AD) and Entra ID flat files. These scripts allow you to instantly locate user identities, IAM roles, and RBAC information without the manual effort of opening massive `.csv` or `.xlsx` exports in Excel.
 
 ---
 
-## **🔐 What These Scripts Do**
+## **⚡ Why Use This?**
 
-- Validate **user‑entered passwords** against strict security rules  
-- Enforce:
-  - Minimum length requirements  
-  - Uppercase, lowercase, digit, and special‑character presence  
-  - Strong password composition for secure account creation  
-- Provide clear feedback when a password **fails** policy requirements  
-- Ensure users create **secure, compliant passwords** before account provisioning  
+* **Speed:** Locate users in milliseconds using pure Python.
+* **Efficiency:** Avoid the "Excel lag" associated with massive identity exports.
+* **Flexibility:** Search across all columns or target specific data structures.
+* **Local & Secure:** All parsing happens on your machine; no data is uploaded or transmitted.
 
 ---
 
 ## **📁 Repository Structure**
 
 | File | Description |
-|------|-------------|
-| `25 characters and special charcter password creation script.py` | Validates that a user‑entered password is **25 characters** and includes required special characters. |
-| `Strong password chacarters but with 16-30 minimum.py` | Validates that a user‑entered password is **16–30 characters** and meets strong‑password criteria. |
-| `.gitattributes` | Standard Git attributes configuration. |
+| :--- | :--- |
+| `parse_query_for_all_spreadsheets_locally_AD.py` | **Universal AD Parser:** Scans every text column for a match. Ideal for inconsistent headers like Name or DisplayName. |
+| `parse_query_for_my_own_spreadsheet.py` | **Directory Inspector:** Targeted lookup for consistent layouts. Extracts specific fields like User ID, Job Title, and RBAC info. |
 
 ---
 
 ## **🧩 Requirements**
 
-- **Python 3.8+**
-- No external libraries required
+* **Python 3.8+**
+* **Pandas:** `pip install pandas`
+* **Openpyxl:** `pip install openpyxl`
 
 ---
 
 ## **🚀 Usage**
 
-### **1. Clone the Repository**
+### **1. Run a Lookup Script**
 ```bash
-git clone https://github.com/buchanan97/User-creation-password-setup.git
-cd User-creation-password-setup
-```
-
-### **2. Run a Validation Script**
-
-#### **Validate a 25‑Character Password**
-```bash
-python "25 characters and special charcter password creation script.py"
-```
-
-#### **Validate a 16–30 Character Strong Password**
-```bash
-python "Strong password chacarters but with 16-30 minimum.py"
-```
-
----
-
-## **📝 Example Interaction**
-
-```
-Enter your password:
-> MyWeakPassword123
-
-Password does NOT meet requirements:
-- Must include at least one special character
-- Must be at least 25 characters long
-```
-
-```
-Enter your password:
-> A9!fLxPq#7rT2@bWm8$KdZyQ
-
-Password accepted.
-```
-
----
-
-## **🔒 Security Notes**
-
-- Passwords are validated **locally** and never transmitted externally.  
-- Use these scripts as part of a secure onboarding or IAM workflow.  
-- Avoid logging or storing user passwords in plaintext.  
-
----
-
-## **🤝 Contributing**
-
-Contributions are welcome!  
-Feel free to submit improvements, new validation rules, or integrations with IAM systems.
-
----
-
-## **📄 License**
-
-This project is licensed under the MIT License.
-
----
-
-If you want, I can also:
-
-- Add **flowcharts** showing the validation logic  
-- Add **unit tests** for each password rule  
-- Rewrite the scripts to be **modular**, **object‑oriented**, or **API‑ready**  
-
-Just tell me what direction you want to take this project.
+python parse_query_for_all_spreadsheets_locally_AD.py
