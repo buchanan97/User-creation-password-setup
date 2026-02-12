@@ -1,7 +1,4 @@
-Got it — thanks for the clarification.  
-Your scripts **don’t generate passwords**, they **validate** that a user‑created password meets specific security requirements.
 
-Let’s rewrite the README so it accurately reflects that purpose.
 
 Below is a polished, professional **README.md** tailored to your repository’s actual function.
 
