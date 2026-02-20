@@ -1,7 +1,3 @@
-
-
-Below is a polished, professional **README.md** tailored to your repository’s actual function.
-
 ---
 
 # **User Password Requirement Validation Scripts**
