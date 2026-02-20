@@ -101,12 +101,3 @@ Feel free to submit improvements, new validation rules, or integrations with IAM
 
 This project is licensed under the MIT License.
 
----
-
-If you want, I can also:
-
-- Add **flowcharts** showing the validation logic  
-- Add **unit tests** for each password rule  
-- Rewrite the scripts to be **modular**, **object‑oriented**, or **API‑ready**  
-
-Just tell me what direction you want to take this project.
